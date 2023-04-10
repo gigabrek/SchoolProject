@@ -116,7 +116,7 @@ a:hover::after{
 }
 
 #main{
-    background-image: url("/img/cmpBd.jpg");
+    background-image: url("img/cmpBd.jpg");
     background-repeat:initial;
     
     height: 100vh;
