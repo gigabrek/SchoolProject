@@ -1,0 +1,164 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0px
+  }
+
+body{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#box{
+    color: snow;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    padding-block: 1vh;
+    width: auto;
+
+    background-color: #7BAFEB;
+
+    align-items: center;
+}
+
+#h1header{
+    font-size: 2vw;
+    margin-left: 10px;
+}
+
+#line{
+    background-color: white;
+
+
+    border-radius: 90px;
+
+    height: 10vh;
+    width: 3px;
+
+    margin-left: 1vw;
+}
+
+nav{
+    width: 80vw;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+li{
+
+    list-style: none;
+}
+
+a{
+    padding-block: 1.5vh;
+    padding-inline: 2.5vw;
+
+    color: snow;
+
+    text-decoration: none;
+
+    font-size: 2vh;
+
+    display: inline-block;
+    position: relative;
+    color: snow;
+}
+
+a::after{
+    margin-top: 5vh;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    left: 0;
+    background-color: snow;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+a:hover::after{
+    margin-top: 5vh;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#M{
+    background-color: #1C1C1C;
+}
+
+
+#Mk{
+    background-color: #F48C40;
+}
+
+#N{
+    background-color: #327C81;
+}
+
+#main{
+    background-image: url("/img/cmpBd.jpg");
+    background-repeat:initial;
+    
+    height: 100vh;
+
+    display: flex;
+}
+
+aside{
+    width: 50vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    /* border: 1px solid red; */
+}
+
+article{
+    padding: 1vh;
+    height: auto;
+    width: 25vw;
+    background-color: #7BAFEB;
+}
+
+article > h3{
+    font-size: 1.5vw;
+}
+
+p{
+    font-size: 1vw;
+}
+
+#footer{
+    display: grid;
+    place-content: center;
+
+    background-color: #7BAFEB;
+
+    width: auto;
+    height: 10vh;
+    
+    font-size: 2vh;
+}
