@@ -52,10 +52,10 @@ h1{
 
     border-radius: 90px;
 
-    height: 10vh;
+    height: 100%;
     width: 3px;
 
-    margin-left: 1vw;
+    margin-inline: 1vw 1vw;
 }
 
 nav{
@@ -218,8 +218,10 @@ aside{
 
 
 footer{
-    display: grid;
-    place-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 1vh;
 
     background-color: #E96C11;
 
@@ -227,6 +229,84 @@ footer{
     height: 10vh;
     
     font-size: 2vh;
+}
+
+.open-button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding-block: 1.5vh;
+    padding-inline: 2.5vw;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2vh;
+
+    display: inline-block;
+    position: relative;
+}
+
+.open-button::after{
+    margin-top: 15%;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    left: 0;
+    background-color: snow;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.open-button:hover::after{
+    margin-top: 15%;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.submit{
+    background-color: #f44336; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+
+    display: inline-block;
+    position: relative;
+}
+
+.modal{
+    padding: 1em;
+    max-width: 50ch;
+}
+
+.modal::backdrop{
+    background-image: url("img/kottło.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    opacity: .95;
+}
+
+form {
+    display: grid;
+    gap: 1em;
+}
+
+dialog{
+    background-color: grey;
+}
+
+dialog textarea,input{
+    transition: 1s linear;
+    border-radius: 5px;
+}
+
+dialog textarea:hover,input:hover{
+    transition: 0s linear;
+    box-shadow: 0 0 1em #E96C11;
 }
 
 /* ================================= */
@@ -326,9 +406,4 @@ i{
     cursor: default;
 }
 
-/* i:hover{
-    transition: 0s;
-    color: purple;
-    text-shadow: 0 0 120px purple;
-} */
 /* ============================================ */

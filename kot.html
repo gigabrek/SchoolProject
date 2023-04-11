@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="description">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <title>Moj Kot</title>
     <link rel="stylesheet" href="kot.css">
+    <script src="kot.js" defer></script>
 </head>
 <body>
     <div id="box">
@@ -17,20 +19,51 @@
             <nav>
                 <ul>
                     <li>
+                        <a href="index.html" id="M">Main</a>
+                    </li>
+                    <li>
                         <a href="narty.html" id="N">Narty</a>
                     </li>
                     <li>
                         <a href="mikro.html" id="Mik">Mikrokontroler</a>
-                    </li>
-                    <li>
-                        <a href="main.html" id="M">Main</a>
                     </li>
                 </ul>
             </nav>
         </header>
 
         <div id="grid">
-            <section id="intBck">
+
+        <main>
+            <aside id="aside1">
+                <div class="imgholder">
+                    <img class="CatImg" src="img/kot1.jpg" alt="kitka">
+                </div>
+                <div class="imgholder">
+                    <img class="CatImg" src="img/kot2.jpg" alt="kitka">
+                </div>
+            </aside>
+            <aside id="aside2">
+                <div class="imgholder">
+                    <img class="CatImg" src="img/kot3.jpg" alt="kitka">
+                </div>
+                <div class="imgholder">
+                    <img class="CatImg" src="img/kot4.jpg" alt="kitka">
+                </div>
+            </aside>
+
+        <section id="mainsection">
+            <div class="SectionImg">
+                <img src="img/kotSekcja.jpg" alt="kitka">
+            </div>
+            <div class="SectionImg">
+                <img src="img/serce.png" alt="serce">
+            </div>
+            <div class="SectionImg">
+                <img src="img/Ja.jpg" alt="ja(Igor)">
+            </div>
+        </section>
+        </main>            
+        <section id="intBck">
                 <div class="row">
                     <div>
                         <i class="fa-solid fa-ghost"></i>
@@ -1182,36 +1215,6 @@
                     </div>
                 </div>
             </section>
-        <main>
-            <aside id="aside1">
-                <div class="imgholder">
-                    <img class="CatImg" src="img/kot1.jpg" alt="kitka">
-                </div>
-                <div class="imgholder">
-                    <img class="CatImg" src="img/kot2.jpg" alt="kitka">
-                </div>
-            </aside>
-            <aside id="aside2">
-                <div class="imgholder">
-                    <img class="CatImg" src="img/kot3.jpg" alt="kitka">
-                </div>
-                <div class="imgholder">
-                    <img class="CatImg" src="img/kot4.jpg" alt="kitka">
-                </div>
-            </aside>
-
-        <section id="mainsection">
-            <div class="SectionImg">
-                <img src="img/kotSekcja.jpg" alt="kitka">
-            </div>
-            <div class="SectionImg">
-                <img src="img/serce.png" alt="serce">
-            </div>
-            <div class="SectionImg">
-                <img src="img/Ja.jpg" alt="ja(Igor)">
-            </div>
-        </section>
-        </main>
         </div>
 
 
@@ -1220,7 +1223,26 @@
 
         <footer >
             <h1>2023 Made by &copy; Igor Wnuk</h1>
+            <div id="line"></div>
+            <button class="open-button">Otworz formularz</button>
         </footer>
+
+        <dialog class="modal" id="modal">
+            <h2>Co sądzisz o moim kitku??</h2>
+            <form method="dialog">
+    
+            <section id="top">
+                <input id="imie" name="imienazwisko" type="text" placeholder="Twoje imie" required></input>
+                <input id="nazwisko" name="imienazwisko" type="text" placeholder="Twoje nazwisko" required></input>            
+            </section>
+    
+            <textarea id="opinia" name="opinia" type="text" placeholder="twoja opinia np 'super wiewiura'" required></textarea>
+            <h5>Jak oceniasz kitka w skali od 1 od 10?</h5>
+            <input id="1-10" name="1-10" type="range" min="1" max="10"></input>
+    
+            <button class="submit" type="submit">wyslij</button>
+            </form>
+        </dialog>
     </div>
 </body>
 </html>
