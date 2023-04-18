@@ -69,18 +69,19 @@ nav{
 ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 ul li{
-
     list-style: none;
 }
 
 a{
-    padding-block: 1.5vh;
-    padding-inline: 2.5vw;
+    padding-block: 1.5vh 1.5vh;
+    padding-inline: 2.5vw 2.5vw;
 
+    margin-inline: 5vw 0 ;
+    
     color: snow;
 
     text-decoration: none;
@@ -169,6 +170,11 @@ article{
     height: auto;
 }
 
+article > p{
+    display: flex;
+    align-items: center;
+}
+
 #top article:nth-child(1){
     width: 60vw;
 }
@@ -203,7 +209,7 @@ h3{
 }
 
 p{
-    font-size: 1vh;
+    font-size: 1rem;
 }
 
 table, td{
@@ -212,6 +218,20 @@ table, td{
 
 td{
     font-size: 1vw;
+    padding: 1rem;
+}
+
+ol{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 80%;
+}
+
+article .text{
+   display: flex;
+   align-items: center;
 }
 
 footer{

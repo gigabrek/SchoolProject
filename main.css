@@ -55,13 +55,13 @@ h1{
 }
 
 nav{
-    width: 80vw;
+    width: 80%;
 }
 
 ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 li{
@@ -70,8 +70,10 @@ li{
 }
 
 a{
-    padding-block: 1.5vh;
-    padding-inline: 2.5vw;
+    padding-block: 1.5vh 1.5vh;
+    padding-inline: 2.5vw 2.5vw;
+
+    margin-inline: 5vw 0 ;
 
     color: snow;
 
@@ -131,12 +133,10 @@ aside{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
-    /* border: 1px solid red; */
 }
 
 article{
-    padding: 1vw;
+    padding: 2vw;
     height: auto;
     width: 25vw;
     background-color: #7BAFEB;
@@ -148,6 +148,10 @@ article > h3{
 
 p{
     font-size: 1vw;
+}
+
+article:nth-child(1) p{
+    font-weight: bold
 }
 
 footer{

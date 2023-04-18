@@ -59,13 +59,13 @@ h1{
 }
 
 nav{
-    width: 80vw;
+    width: 80%;
 }
 
 ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 li{
@@ -74,8 +74,10 @@ li{
 }
 
 a{
-    padding-block: 1.5vh;
-    padding-inline: 2.5vw;
+    padding-block: 1.5vh 1.5vh;
+    padding-inline: 2.5vw 2.5vw;
+
+    margin-inline: 5vw 0 ;
 
     color: snow;
 
@@ -307,6 +309,32 @@ dialog textarea,input{
 dialog textarea:hover,input:hover{
     transition: 0s linear;
     box-shadow: 0 0 1em #E96C11;
+}
+
+datalist {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    writing-mode: vertical-lr;
+    width: 90%;
+}
+
+option {
+    padding: 1vh;
+
+}
+
+.close-button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+
+    display: inline-block;
+    position: relative;
 }
 
 
